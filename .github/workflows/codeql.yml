@@ -60,7 +60,8 @@ jobs:
     #- name: Autobuild
     #  uses: github/codeql-action/autobuild@v2
     - name: build using maven
-      run: mvnw -B package -DskipTests
+      run: |
+        ./mvnw -B package -DskipTests
       
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
